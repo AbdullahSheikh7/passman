@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon",
-    "build": "node ."
+    "dev": "nodemon server.js",
+    "build": "node server.js"
   },
   "author": "Abdullah",
   "license": "ISC",
