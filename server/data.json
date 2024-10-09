@@ -1,0 +1,62 @@
+[{_id:"66fc3640d36ae6a4b31eb616",website:"facebook.com",auths:[{_id:"66fc35efd36ae6a4b31eb612",email:"abdullahsheikh@gmail.com",password:"ThisIsASimplePassword",createdAt:"2024-05-04T18:49:43.950Z",updatedAt:"2024-07-08T16:10:03.143Z",__v:0},{_id:"66fc3633d36ae6a4b31eb613",email:"abdullahsalahuddin@gmail.com",password:"VerySimplePassword",createdAt:"2024-04-04T18:10:41.950Z",updatedAt:"2024-07-08T20:10:04.143Z",__v:0}]},{_id:"66fc36ebd36ae6a4b31eb618",website:"google.com",auths:[{_id:"66fc3717d36ae6a4b31eb61a",email:"abdullahsheikh@gmail.com",password:"ASimplePassword",createdAt:"2024-05-04T18:49:43.950Z",updatedAt:"2024-07-08T16:10:03.143Z",__v:0}]},{_id:"66fc384fd36ae6a4b31eb61f",website:"twitter.com",auths:[{_id:"66fc37edd36ae6a4b31eb61b",email:"abdullahsheikh@gmail.com",password:"password",createdAt:"2024-05-04T18:49:43.950Z",updatedAt:"2024-07-08T16:10:03.143Z",__v:0},{_id:"66fc3807d36ae6a4b31eb61c",email:"abdullahsheikh@gmail.com",password:"NewPassword",createdAt:"2024-05-04T18:49:43.950Z",updatedAt:"2024-07-08T16:10:03.143Z",__v:0}]}]
+
+[
+  {
+    _id: "66fc3640d36ae6a4b31eb616",
+    website: "facebook.com",
+    auths: [
+      {
+        _id: "66fc35efd36ae6a4b31eb612",
+        email: "abdullahsheikh@gmail.com",
+        password: "ThisIsASimplePassword",
+        createdAt: "2024-05-04T18:49:43.950Z",
+        updatedAt: "2024-07-08T16:10:03.143Z",
+        __v: 0
+      },
+      {
+        _id: "66fc3633d36ae6a4b31eb613",
+        email: "abdullahsalahuddin@gmail.com",
+        password: "VerySimplePassword",
+        createdAt: "2024-04-04T18:10:41.950Z",
+        updatedAt: "2024-07-08T20:10:04.143Z",
+        __v: 0
+      }
+    ]
+  },
+  {
+    _id: "66fc36ebd36ae6a4b31eb618",
+    website: "google.com",
+    auths: [
+      {
+        _id: "66fc3717d36ae6a4b31eb61a",
+        email: "abdullahsheikh@gmail.com",
+        password: "ASimplePassword",
+        createdAt: "2024-05-04T18:49:43.950Z",
+        updatedAt: "2024-07-08T16:10:03.143Z",
+        __v: 0
+      }
+    ]
+  },
+  {
+    _id: "66fc384fd36ae6a4b31eb61f",
+    website: "twitter.com",
+    auths: [
+      {
+        _id: "66fc37edd36ae6a4b31eb61b",
+        email: "abdullahsheikh@gmail.com",
+        password: "password",
+        createdAt: "2024-05-04T18:49:43.950Z",
+        updatedAt: "2024-07-08T16:10:03.143Z",
+        __v: 0
+      },
+      {
+        _id: "66fc3807d36ae6a4b31eb61c",
+        email: "abdullahsheikh@gmail.com",
+        password: "NewPassword",
+        createdAt: "2024-05-04T18:49:43.950Z",
+        updatedAt: "2024-07-08T16:10:03.143Z",
+        __v: 0
+      }
+    ]
+  }
+]
