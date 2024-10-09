@@ -66,7 +66,7 @@ const AddPasswordDialog = ({ setThisVisible }: { setThisVisible: Function }) => 
     } else {
       const web = website.match(/^(?:https?:\/\/)?(?:www\.)?([^\/]+)/)?.[1] 
       setThisVisible(false)
-      if (apiAndRefetch) await apiAndRefetch("/passwords", "POST", { website: web, email, password })
+      if (apiAndRefetch) await apiAndRefetch("/passwords", "POST", { website: web?.toLowerCase(), email, password })
       if (setChanged) setChanged(true)
       enqueueSnackbar("New password saved successfully", { variant: "success" })
       }
