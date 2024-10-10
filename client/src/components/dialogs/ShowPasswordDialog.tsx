@@ -12,13 +12,13 @@ const ShowPasswordDialog = ({ addAllAuths, website, passwordData, closeDialog }:
     setIconCrossWhite(dotLottie)
   }
 
-  const apiAndRefetch = useContext(AppContext)?.apiAndRefetch;
+  const api = useContext(AppContext)?.api;
   const setChanged = useContext(AppContext)?.setChanged;
 
   const [forceCloseAttempted, setForceCloseAttempted] = useState<boolean>(false)
 
   const savePassword = async (id: string, body: {email: string, password: string}) => {
-    if (apiAndRefetch) await apiAndRefetch(`/passwords/${id}`, "PUT", body)
+    if (api) await api(`/passwords/${id}`, "PUT", body)
     if (setChanged) setChanged(true)
   }
 

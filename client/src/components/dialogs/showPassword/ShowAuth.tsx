@@ -27,6 +27,8 @@ const ShowAuth = forwardRef<saveChildHandle, Props>(({ auth, forceCloseAttempted
   const [iconCopyEmail, setIconCopyEmail] = useState<DotLottie>()
   const [iconCopyPassword, setIconCopyPassword] = useState<DotLottie>()
 
+  console.log(auth);
+
   const dotLottieRefCallbackIconDelete = (dotLottie: DotLottie) => {
     setIconDelete(dotLottie);
   }
@@ -79,6 +81,7 @@ const ShowAuth = forwardRef<saveChildHandle, Props>(({ auth, forceCloseAttempted
       saveAuthFunc(auth._id, {email, password})
       editOpened?.current.splice(editOpened?.current.indexOf(auth._id), 1)
       setEditMode(false)
+      console.log
       return true;
     }
     return false;

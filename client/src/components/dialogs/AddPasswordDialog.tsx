@@ -7,7 +7,7 @@ import { DotLottie, DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { enqueueSnackbar } from "notistack";
 
 const AddPasswordDialog = ({ setThisVisible }: { setThisVisible: Function }) => {
-  const apiAndRefetch = useContext(AppContext)?.apiAndRefetch;
+  const api = useContext(AppContext)?.api;
   const setChanged = useContext(AppContext)?.setChanged;
 
   const [iconCrossWhite, setIconCrossWhite] = useState<DotLottie>()
@@ -66,7 +66,7 @@ const AddPasswordDialog = ({ setThisVisible }: { setThisVisible: Function }) => 
     } else {
       const web = website.match(/^(?:https?:\/\/)?(?:www\.)?([^\/]+)/)?.[1] 
       setThisVisible(false)
-      if (apiAndRefetch) await apiAndRefetch("/passwords", "POST", { website: web?.toLowerCase(), email, password })
+      if (api) await api("/passwords", "POST", { website: web?.toLowerCase(), email, password })
       if (setChanged) setChanged(true)
       enqueueSnackbar("New password saved successfully", { variant: "success" })
       }

@@ -6,7 +6,7 @@ import { AppContext } from "../../contexts/AppContext";
 import { enqueueSnackbar } from "notistack";
 
 const DeleteDialog = ({ close, element, website }: { close: MouseEventHandler, element: "auth" | "password", website: string }) => {
-  const apiAndRefetch = useContext(AppContext)?.apiAndRefetch
+  const api = useContext(AppContext)?.api
   const setChanged = useContext(AppContext)?.setChanged
   const id = useContext(AppContext)?.id
   const deleteYes = useContext(AppContext)?.deleteYes
@@ -19,7 +19,7 @@ const DeleteDialog = ({ close, element, website }: { close: MouseEventHandler, e
   }
 
   const requestDelete = async () => {
-    if (apiAndRefetch) await apiAndRefetch(element === "auth" ? `/passwords/${id}` : `/passwords/website/${id}`, "DELETE")
+    if (api) await api(element === "auth" ? `/passwords/${id}` : `/passwords/website/${id}`, "DELETE")
     if (setChanged) setChanged(true)
     if (deleteYes) deleteYes()
     if (setDeletedAuths && element === "auth") setDeletedAuths(rest => [...rest, (id ? id : "")])

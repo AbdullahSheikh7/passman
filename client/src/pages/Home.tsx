@@ -92,7 +92,7 @@ const Home = () => {
 
   const editOpened = useRef<string[]>([]);
 
-  const apiAndRefetch = async (url: string, method: "GET" | "POST" | "PUT" | "DELETE" = "GET", body?: {}) => {
+  const api = async (url: string, method: "GET" | "POST" | "PUT" | "DELETE" = "GET", body?: {}) => {
     await fetch(backend+url, {
       method,
       headers: {
@@ -105,12 +105,16 @@ const Home = () => {
 
   useEffect(() => {
     (async () => {
+      if (changed) {
+        setChanged(false)
+        return;
+      }
+
       setLoading(true);
 
       const data: PasswordsData = (await fetch(`${backend}/passwords`).then(res => res.json())).data
       setPasswordsData(data);
 
-      setChanged(false)
       setLoading(false);
     })();
   }, [changed]);
@@ -165,7 +169,7 @@ const Home = () => {
   return (
     <>
       <AppContext.Provider
-        value={{ editOpened, setChanged, forceCloseDialog, apiAndRefetch, setElementToDelete, deletePassword, deleteAuth, id, deleteYes, deletedAuths, setDeletedAuths }}
+        value={{ editOpened, setChanged, forceCloseDialog, api, setElementToDelete, deletePassword, deleteAuth, id, deleteYes, deletedAuths, setDeletedAuths }}
       >
         <div className="mx-auto w-[90%] sm:w-4/5 lg:w-3/5 py-20 flex flex-col items-center h-screen">
           <h1
